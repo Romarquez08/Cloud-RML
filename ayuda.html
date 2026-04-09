@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>AutoMatch — Ayuda</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="pink-bg">
+
+  <header class="top-bar small">
+    <div class="left-top">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <h1 class="logo small-logo">AutoMatch</h1>
+    </div>
+
+    <div class="right-top">
+      <input id="searchA" class="search" placeholder="Buscar modelo (ej. ford territory)" />
+      <img src="img/AM.jpg" class="icon" alt="AM"/>
+      <div class="cart-container">
+        <img src="img/carrito.jpg" class="cart-icon" id="cartBtnA" alt="Carrito">
+        <span class="cart-count" id="cartCountA">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <h2 class="page-title">AYUDA</h2>
+
+    <div class="help-img-box">
+      <img src="img/int.jpg" class="help-img" alt="Tráfico" />
+    </div>
+
+    <p class="help-title">¿En qué podemos ayudarte?</p>
+
+    <div class="help-options">
+      <button class="help-btn" onclick="window.location='mailto:automatchhelp@hotmail.com?subject=Problema con la página'">Problemas con la página</button>
+      <button class="help-btn" onclick="window.location='mailto:automatchhelp@hotmail.com?subject=Soporte depósito'">Quiero soporte para un depósito</button>
+      <button class="help-btn" onclick="window.location='mailto:automatchhelp@hotmail.com?subject=No se suben mis documentos'">No se suben mis documentos</button>
+      <button class="help-btn" onclick="window.location='mailto:automatchhelp@hotmail.com?subject=Otro'">Otro...</button>
+    </div>
+  </main>
+
+  <a href="index.html" class="home-btn"><img src="img/home.jpg" alt="Home"/></a>
+
+  <!-- overlay + cart modal -->
+  <div id="overlay" class="overlay" style="display:none"></div>
+  <div id="cartModal" class="cart-modal" aria-hidden="true">
+    <button class="close-x" id="closeCartBtnA">&times;</button>
+    <h3>Mi carrito</h3>
+    <div class="cart-list-wrap"><ul id="cartItemsA"></ul></div>
+    <div class="cart-footer">
+      <div><strong>Total:</strong> <span id="cartTotalA">$0</span></div>
+      <div class="cart-actions">
+        <button id="reserveBtnA" class="action-btn">Apartar</button>
+        <button id="quoteBtnA" class="action-btn outline">Cotizar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="search.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>AutoMatch — Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="home-body">
+
+  <header class="top-bar">
+    <div class="left-top">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <h1 class="logo">AutoMatch</h1>
+    </div>
+
+    <div class="right-top">
+      <input id="headerSearch" class="search" placeholder="Buscar modelo (ej. ford territory, audi q5)" />
+      <!-- ayuda solo en index: abre mail -->
+      <a href="mailto:automatchhelp@hotmail.com" class="help-button" title="Ayuda">
+        <img src="img/ayuda.jpg" class="icon" alt="Ayuda"/>
+      </a>
+
+      <img src="img/AM.jpg" class="icon" alt="AM"/>
+      <div class="cart-container" title="Ver carrito">
+        <img src="img/carrito.jpg" class="cart-icon" id="cartBtn" alt="Carrito">
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="contact-row">
+    <div class="contact-item"><img src="img/telefono.jpg" class="contact-icon"/><span>01-800-AUTOMATCH</span></div>
+    <div class="contact-item"><img src="img/IG.jpg" class="contact-icon"/><span>AutoMatchFY</span></div>
+    <div class="contact-item"><img src="img/mail.jpg" class="contact-icon"/><span>automatchmex@gmail.com</span></div>
+  </div>
+
+  <section class="hero">
+    <div class="banner-franja"><p>Somos AutoMatch para ti!!!</p></div>
+
+    <div class="home-options">
+      <a class="home-card" href="nuevos.html">
+        <img src="img/MercedesG63.jpg" alt="Autos Nuevos" class="car-img"/>
+        <p>Autos Nuevos</p>
+      </a>
+
+      <a class="home-card" href="seminuevos.html">
+        <img src="img/civic.jpg" alt="Seminuevos" class="car-img"/>
+        <p>Autos Seminuevos</p>
+      </a>
+
+      <a class="home-card" href="cotizaciones.html">
+        <img src="img/cotizaciones.jpg" alt="Cotizaciones" class="car-img"/>
+        <p>Cotizaciones</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- lugar donde aparecen resultados del search rápido -->
+  <div id="search-results-root"></div>
+
+  <!-- modal carrito (flotante) -->
+  <div id="overlay" class="overlay" style="display:none"></div>
+  <div id="cartModal" class="cart-modal" aria-hidden="true">
+    <button class="close-x" id="closeCartBtn">&times;</button>
+    <h3>Mi carrito</h3>
+    <div class="cart-list-wrap">
+      <ul id="cartItems"></ul>
+    </div>
+    <div class="cart-footer">
+      <div><strong>Total:</strong> <span id="cartTotal">$0</span></div>
+      <div class="cart-actions">
+        <button id="reserveBtn" class="action-btn">Apartar</button>
+        <button id="quoteBtn" class="action-btn outline">Cotizar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="search.js"></script>
+</body>
+</html>
